@@ -15,9 +15,9 @@ The goals / steps of this project are the following:
 
 [image1]: ./cnn-architecture-624x890.png "Model Visualization"
 [image2]: ./center.jpg "Center Image"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image3]: ./recovery1.PNG "Recovery Image"
+[image4]: ./recovery2.PNG "Recovery Image"
+[image5]: ./recovery3.PNG "Recovery Image"
 [image6]: ./UnFlipped.jpg "Normal Image"
 [image7]: ./Flipped.jpg "Flipped Image"
 
@@ -124,28 +124,26 @@ Trainable params: 2,648,603
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+I used the data given by Udacity to train the model. Here is an example image of center lane driving:
 
 ![alt text][image2]
 
-I used the data given by Udacity to train the model a
+
+These images show what a recovery looks like starting from  :
+
 ![alt text][image3]
 ![alt text][image4]
 ![alt text][image5]
 
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would increase the training data and additionally be helpful to train the model for right turns for each left turn and vice verca. Correspondingly the steering measurements were also negated. For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles as this would increase the training data and additionally be helpful to train the model for right turns for the subsequent left turn and vice versa. Correspondingly the steering measurements were also negated. For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 
 ![alt text][image7]
 
-Etc ....
+After the collection process, I had 35133 number of data points. I then preprocessed this data by normalizing it using the formula 
+(X-255.0) / 0.5 to center the image values and have a similar distribution for data.
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 4 as evidenced by loss the value which starts to inrease after 4 iterations of training. I used an adam optimizer so that manually training the learning rate wasn't necessary.

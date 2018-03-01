@@ -128,15 +128,14 @@ To capture good driving behavior, I first recorded two laps on track one using c
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
+I used the data given by Udacity to train the model a
 ![alt text][image3]
 ![alt text][image4]
 ![alt text][image5]
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would increase the training data and additionally be help full to gatherFor example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles thinking that this would increase the training data and additionally be helpful to train the model for right turns for each left turn and vice verca. Correspondingly the steering measurements were also negated. For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 

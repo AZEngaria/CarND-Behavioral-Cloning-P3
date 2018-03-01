@@ -129,13 +129,13 @@ I used the data given by Udacity to train the model. Here is an example image of
 ![alt text][image2]
 
 
-These images show what a recovery looks like starting from  :
+As the sample data was used for this, the model also easily recovers and centers the position in lane as and when deviated. The following images show the recovery of the car when it slightly moves towards the right:
 
 ![alt text][image3]
 ![alt text][image4]
 ![alt text][image5]
 
-To augment the data sat, I also flipped images and angles as this would increase the training data and additionally be helpful to train the model for right turns for the subsequent left turn and vice versa. Correspondingly the steering measurements were also negated. For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles as this would increase the training data and additionally be helpful to train the model for the right turns corresponding to each left turn and vice versa. Subsequently the steering measurements were also negated. For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 
